@@ -1,6 +1,7 @@
 <p align="center">
   <img alt="Tailwind CSS" src="https://raw.githubusercontent.com/goduu/aura-bean-annotator/HEAD/.github/logo.svg" width="500" style="max-width: 100%;"/>
 </p>
+
 # AuraBean Annotator
 
 The AuraBean Annotator library offers a set of React components designed to enhance the visual appeal of your application with annotated highlights and decorative elements. This library includes the AuraBeanAnnotator, AuraBeanAnnotatorContainer, and AuraBeanVerticalDivider components, each customizable with various props for color and positioning.
