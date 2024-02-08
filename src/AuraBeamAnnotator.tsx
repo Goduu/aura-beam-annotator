@@ -3,12 +3,12 @@ import { ColorKeys, bgColors, borderColors } from './colors';
 
 export type AuraBeamAnnotatorProps = {
     title: string;
-    positioning: 'left' | 'right';
     children: ReactNode;
+    positioning?: 'left' | 'right';
     color?: ColorKeys;
 };
 
-export const AuraBeamAnnotator: FC<AuraBeamAnnotatorProps> = ({ title, color = "current", positioning, children }) => {
+export const AuraBeamAnnotator: FC<AuraBeamAnnotatorProps> = ({ title, color = "white", positioning = "left", children }) => {
     const positionLeft = positioning === 'left'
 
     return (

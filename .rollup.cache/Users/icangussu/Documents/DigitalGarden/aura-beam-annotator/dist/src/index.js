@@ -1,4 +1,4 @@
-export { AuraBeamAnnotator as AuraBeanAnnotator } from './AuraBeamAnnotator';
-export { AuraBeamAnnotatorContainer as AuraBeanAnnotatorContainer } from './AuraBeamAnnotatorContainer';
-export { AuraBeamVerticalDivider as AuraBeanVerticalDivider } from './AuraBeanVerticalDivider';
+export { AuraBeamAnnotator } from './AuraBeamAnnotator';
+export { AuraBeamAnnotatorContainer } from './AuraBeamAnnotatorContainer';
+export { AuraBeamVerticalDivider } from './AuraBeanVerticalDivider';
 //# sourceMappingURL=index.js.map
