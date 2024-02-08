@@ -1,10 +1,14 @@
 <p align="center">
-  <img alt="Tailwind CSS" src="https://raw.githubusercontent.com/goduu/aura-beam-annotator/HEAD/.github/logo.svg" width="500" style="max-width: 100%;"/>
+  <img alt="AuraBeam Annotator" src="https://raw.githubusercontent.com/goduu/aura-beam-annotator/HEAD/.github/logo.svg" width="500" style="max-width: 100%;"/>
 </p>
 
 # AuraBeam Annotator
 
+[![Storybook](https://img.shields.io/badge/-Storybook-FF4785?logo=storybook&logoColor=white)](https://aura-beam-annotator.vercel.app/)
+
 The AuraBeam Annotator library offers a set of React components designed to enhance the visual appeal of your application with annotated highlights and decorative elements. This library includes the AuraBeamAnnotator, AuraBeamAnnotatorContainer, and AuraBeamVerticalDivider components, each customizable with various props for color and positioning.
+
+This library uses [Storybook](https://storybook.js.org/) to manage its UI components, making it easy for developers to browse a live UI library and interact with each component's states without diving into the codebase.
 
 ## Installation
 
