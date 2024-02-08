@@ -6,3 +6,10 @@ tailwind.config.js
 src/*
 node_modules/*
 examples/*
+
+# storybook
+src/stories/*
+.storybook/*
+styles/*
+
+
