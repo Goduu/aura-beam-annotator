@@ -2,7 +2,7 @@ import React, { FC, ReactNode } from 'react';
 import { ColorKeys, bgColors, borderColors } from './colors';
 
 export type AuraBeamAnnotatorProps = {
-    title: string;
+    title: string | ReactNode;
     children: ReactNode;
     positioning?: 'left' | 'right';
     color?: ColorKeys;
