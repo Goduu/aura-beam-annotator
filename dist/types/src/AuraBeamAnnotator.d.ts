@@ -1,8 +1,9 @@
 import { FC, ReactNode } from 'react';
 import { ColorKeys } from './colors';
 export type AuraBeamAnnotatorProps = {
-    title: string | ReactNode;
-    children: ReactNode;
+    title?: string | ReactNode;
+    type?: "primary" | "secondary";
+    children?: ReactNode;
     positioning?: 'left' | 'right';
     color?: ColorKeys;
 };
