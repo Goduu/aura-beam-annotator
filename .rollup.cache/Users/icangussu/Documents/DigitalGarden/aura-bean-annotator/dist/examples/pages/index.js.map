@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../examples/pages/index.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,QAAQ,EAAE,MAAM,wBAAwB,CAAC;AAElD,eAAe,QAAQ,CAAA","sourcesContent":["import { MainPage } from \"../components/MainPage\";\n\nexport default MainPage\n"]}

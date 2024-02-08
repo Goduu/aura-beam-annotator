@@ -1,6 +1,6 @@
 import React from 'react';
 import { borderColors } from './colors';
-export const AuraBeanVerticalDivider = ({ direction, color = "current" }) => {
+export const AuraBeamVerticalDivider = ({ direction, color = "current" }) => {
     const dirToRight = direction === 'l-to-r';
     return (React.createElement("div", { className: ' mx-5 relative' },
         React.createElement("div", { className: `pb-5 h-5 ${borderColors[color]} ${dirToRight ? "border-l-8" : "border-r-8"} ` }),

@@ -1,11 +1,11 @@
 {
-  "name": "aurora-bean-annotator",
-  "version": "0.5.2",
+  "name": "aurora-beam-annotator",
+  "version": "0.5.4",
   "author": {
     "name": "Goduu"
   },
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/types",
   "keywords": [
     "react",
     "highlight",
@@ -15,6 +15,7 @@
     "typescript"
   ],
   "scripts": {
+    "start": "cd examples && npm start",
     "build": "rollup -c",
     "publish": "npm run build && npm publish --access public"
   },

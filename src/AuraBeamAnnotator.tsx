@@ -1,14 +1,14 @@
 import React, { FC, ReactNode } from 'react';
 import { ColorKeys, bgColors, borderColors } from './colors';
 
-export type AuraBeanAnnotatorProps = {
+export type AuraBeamAnnotatorProps = {
     title: string;
     positioning: 'left' | 'right';
     children: ReactNode;
     color?: ColorKeys;
 };
 
-export const AuraBeanAnnotator: FC<AuraBeanAnnotatorProps> = ({ title, color = "current", positioning, children }) => {
+export const AuraBeamAnnotator: FC<AuraBeamAnnotatorProps> = ({ title, color = "current", positioning, children }) => {
     const positionLeft = positioning === 'left'
 
     return (

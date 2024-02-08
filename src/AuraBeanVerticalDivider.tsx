@@ -1,12 +1,12 @@
 import React, { FC } from 'react'
 import { ColorKeys, borderColors } from './colors';
 
-export type AuraBeanVerticalDividerProps = {
+export type AuraBeamVerticalDividerProps = {
     direction: 'l-to-r' | 'r-to-l';
     color?: ColorKeys;
 }
 
-export const AuraBeanVerticalDivider: FC<AuraBeanVerticalDividerProps> = ({ direction, color = "current" }) => {
+export const AuraBeamVerticalDivider: FC<AuraBeamVerticalDividerProps> = ({ direction, color = "current" }) => {
     const dirToRight = direction === 'l-to-r';
 
     return (

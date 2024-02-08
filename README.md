@@ -1,30 +1,30 @@
 <p align="center">
-  <img alt="Tailwind CSS" src="https://raw.githubusercontent.com/goduu/aura-bean-annotator/HEAD/.github/logo.svg" width="500" style="max-width: 100%;"/>
+  <img alt="Tailwind CSS" src="https://raw.githubusercontent.com/goduu/aura-beam-annotator/HEAD/.github/logo.svg" width="500" style="max-width: 100%;"/>
 </p>
 
-# AuraBean Annotator
+# AuraBeam Annotator
 
-The AuraBean Annotator library offers a set of React components designed to enhance the visual appeal of your application with annotated highlights and decorative elements. This library includes the AuraBeanAnnotator, AuraBeanAnnotatorContainer, and AuraBeanVerticalDivider components, each customizable with various props for color and positioning.
+The AuraBeam Annotator library offers a set of React components designed to enhance the visual appeal of your application with annotated highlights and decorative elements. This library includes the AuraBeamAnnotator, AuraBeamAnnotatorContainer, and AuraBeamVerticalDivider components, each customizable with various props for color and positioning.
 
 ## Installation
 
-To use the AuraBean Components in your project, install the package via npm:
+To use the AuraBeam Components in your project, install the package via npm:
 
 ```bash
-npm install aura-bean-annotator
+npm install aura-beam-annotator
 ```
 
 Or if you prefer using yarn:
 
 ```bash
-yarn add aura-bean-annotator
+yarn add aura-beam-annotator
 ```
 
 ## Components
 
-### AuraBeanAnnotator
+### AuraBeamAnnotator
 
-The AuraBeanAnnotator component adds a highlighted annotation to your text content, with an optional round circle and a customizable border color.
+The AuraBeamAnnotator component adds a highlighted annotation to your text content, with an optional round circle and a customizable border color.
 
 Props
 
@@ -37,45 +37,45 @@ Usage
 
 ```jsx
 import {
-  AuraBeanAnnotator,
-  AuraBeanAnnotatorContainer,
-} from "aura-bean-annotator";
+  AuraBeamAnnotator,
+  AuraBeamAnnotatorContainer,
+} from "aura-beam-annotator";
 
-<AuraBeanAnnotatorContainer>
-  <AuraBeanAnnotator title="Your Title" positioning="left" color="blue">
+<AuraBeamAnnotatorContainer>
+  <AuraBeamAnnotator title="Your Title" positioning="left" color="blue">
     Your content here
-  </AuraBeanAnnotator>
+  </AuraBeamAnnotator>
   ;
-</AuraBeanAnnotatorContainer>;
+</AuraBeamAnnotatorContainer>;
 ```
 
-### AuraBeanAnnotatorContainer
+### AuraBeamAnnotatorContainer
 
-A container component to wrap around one or multiple AuraBeanAnnotator components for consistent spacing and shadow effects.
+A container component to wrap around one or multiple AuraBeamAnnotator components for consistent spacing and shadow effects.
 
 Props
 
-- children: The AuraBeanAnnotator components to be included in the container.
+- children: The AuraBeamAnnotator components to be included in the container.
 
 Usage
 
 ```jsx
 import {
-  AuraBeanAnnotator,
-  AuraBeanAnnotatorContainer,
-} from "aura-bean-annotator";
+  AuraBeamAnnotator,
+  AuraBeamAnnotatorContainer,
+} from "aura-beam-annotator";
 
-<AuraBeanAnnotatorContainer>
-  <AuraBeanAnnotator title="First Title" positioning="left" color="red">
+<AuraBeamAnnotatorContainer>
+  <AuraBeamAnnotator title="First Title" positioning="left" color="red">
     First content
-  </AuraBeanAnnotator>
-  <AuraBeanAnnotator title="Second Title" positioning="right" color="green">
+  </AuraBeamAnnotator>
+  <AuraBeamAnnotator title="Second Title" positioning="right" color="green">
     Second content
-  </AuraBeanAnnotator>
-</AuraBeanAnnotatorContainer>;
+  </AuraBeamAnnotator>
+</AuraBeamAnnotatorContainer>;
 ```
 
-### AuraBeanVerticalDivider
+### AuraBeamVerticalDivider
 
 A component to add a decorative vertical divider with customizable direction and color.
 
@@ -87,21 +87,21 @@ Props
 
 ```jsx
 import {
-  AuraBeanVerticalDivider,
-  AuraBeanAnnotatorContainer,
-} from "aura-bean-annotator";
+  AuraBeamVerticalDivider,
+  AuraBeamAnnotatorContainer,
+} from "aura-beam-annotator";
 
-<AuraBeanAnnotatorContainer>
-  <AuraBeanVerticalDivider direction="l-to-r" color="purple" />;
-</AuraBeanAnnotatorContainer>;
+<AuraBeamAnnotatorContainer>
+  <AuraBeamVerticalDivider direction="l-to-r" color="purple" />;
+</AuraBeamAnnotatorContainer>;
 ```
 
 ## Examples of use:
 
-<img alt="Tailwind CSS" src="https://raw.githubusercontent.com/goduu/aura-bean-annotator/HEAD/.github/ss_01.png" width="2067" style="max-width: 100%;"/>
-<img alt="Tailwind CSS" src="https://raw.githubusercontent.com/goduu/aura-bean-annotator/HEAD/.github/ss_02.png" width="2067" style="max-width: 100%;"/>
-<img alt="Tailwind CSS" src="https://raw.githubusercontent.com/goduu/aura-bean-annotator/HEAD/.github/ss_03.png" width="2067" style="max-width: 100%;"/>
-<img alt="Tailwind CSS" src="https://raw.githubusercontent.com/goduu/aura-bean-annotator/HEAD/.github/ss_04.png" width="2067" style="max-width: 100%;"/>
+<img alt="Tailwind CSS" src="https://raw.githubusercontent.com/goduu/aura-beam-annotator/HEAD/.github/ss_01.png" width="2067" style="max-width: 100%;"/>
+<img alt="Tailwind CSS" src="https://raw.githubusercontent.com/goduu/aura-beam-annotator/HEAD/.github/ss_02.png" width="2067" style="max-width: 100%;"/>
+<img alt="Tailwind CSS" src="https://raw.githubusercontent.com/goduu/aura-beam-annotator/HEAD/.github/ss_03.png" width="2067" style="max-width: 100%;"/>
+<img alt="Tailwind CSS" src="https://raw.githubusercontent.com/goduu/aura-beam-annotator/HEAD/.github/ss_04.png" width="2067" style="max-width: 100%;"/>
 
 ## Customization
 
@@ -109,7 +109,7 @@ The color props for these components are based on predefined color keys from Tai
 
 ## Contributing
 
-We welcome contributions to the AuraBean Components library. Please read our contributing guidelines before submitting pull requests.
+We welcome contributions to the AuraBeam Components library. Please read our contributing guidelines before submitting pull requests.
 
 ## License
 

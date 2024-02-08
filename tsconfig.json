@@ -11,12 +11,12 @@
     "declarationMap": true, // If you want source maps for your declarations
     "composite": true, // Only if needed, for project references
     "outDir": "./dist", // Specifies the output directory for all emitted files
-    "declarationDir": "./dist/index.d.ts", // Optional: Specifies an output folder just for declaration files
+    "declarationDir": "./dist/types", // Optional: Specifies an output folder just for declaration files
   },
   "include": [
-    "**/*.js",
-    "**/*.ts",
-    "**/*.tsx",
+    "src/**/*.js",
+    "src/**/*.ts",
+    "src/**/*.tsx",
   ],
   "exclude": ["node_modules"]
 }
