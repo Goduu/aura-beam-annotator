@@ -1,4 +1,5 @@
 .babelrc
+.github/*
 rollup.config.js
 tsconfig.json
 tailwind.config.js
