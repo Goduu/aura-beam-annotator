@@ -11,7 +11,7 @@ examples/*
 src/stories/*
 .storybook/*
 styles/*
-.storybook-static/*
+storybook-static/*
 
 
 

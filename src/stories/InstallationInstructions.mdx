@@ -1,0 +1,158 @@
+import { Meta } from "@storybook/blocks";
+
+import Github from "./assets/github.svg";
+
+export const RightArrow = () => <svg 
+    viewBox="0 0 14 14" 
+    width="8px" 
+    height="14px" 
+   
+>
+  <path d="m11.1 7.35-5.5 5.5a.5.5 0 0 1-.7-.7L10.04 7 4.9 1.85a.5.5 0 1 1 .7-.7l5.5 5.5c.2.2.2.5 0 .7Z" />
+</svg>
+
+<Meta title="Installation Instructions" />
+
+<div className="sb-container">
+  <p align="center">
+  <img alt="Tailwind CSS" src="https://raw.githubusercontent.com/goduu/aura-beam-annotator/HEAD/.github/logo.svg" width="500" style={{maxWidth: "100%"}}/>
+</p>
+
+# AuraBeam Annotator
+
+The AuraBeam Annotator library offers a set of React components designed to enhance the visual appeal of your application with annotated highlights and decorative elements. This library includes the AuraBeamAnnotator, AuraBeamAnnotatorContainer, and AuraBeamVerticalDivider components, each customizable with various props for color and positioning.
+
+## Installation
+
+To use the AuraBeam Components in your project, install the package via npm:
+
+```bash
+npm install aura-beam-annotator
+```
+
+Or if you prefer using yarn:
+
+```bash
+yarn add aura-beam-annotator
+```
+
+## Components
+
+### AuraBeamAnnotator
+
+The AuraBeamAnnotator component adds a highlighted annotation to your text content, with an optional round circle and a customizable border color.
+
+Props
+
+- title: The text to be displayed as the title.
+- positioning: Position of the highlight and title ("left" or "right").
+- children: The content to be displayed beneath the title.
+- color: Optional. The color key for background and border colors.
+
+Usage
+
+```jsx
+import {
+  AuraBeamAnnotator,
+  AuraBeamAnnotatorContainer,
+} from "aura-beam-annotator";
+
+<AuraBeamAnnotatorContainer>
+  <AuraBeamAnnotator title="Your Title" positioning="left" color="blue">
+    Your content here
+  </AuraBeamAnnotator>
+  ;
+</AuraBeamAnnotatorContainer>;
+```
+
+### AuraBeamAnnotatorContainer
+
+A container component to wrap around one or multiple AuraBeamAnnotator components for consistent spacing and shadow effects.
+
+Props
+
+- children: The AuraBeamAnnotator components to be included in the container.
+
+Usage
+
+```jsx
+import {
+  AuraBeamAnnotator,
+  AuraBeamAnnotatorContainer,
+} from "aura-beam-annotator";
+
+<AuraBeamAnnotatorContainer>
+  <AuraBeamAnnotator title="First Title" positioning="left" color="red">
+    First content
+  </AuraBeamAnnotator>
+  <AuraBeamAnnotator title="Second Title" positioning="right" color="green">
+    Second content
+  </AuraBeamAnnotator>
+</AuraBeamAnnotatorContainer>;
+```
+
+### AuraBeamVerticalDivider
+
+A component to add a decorative vertical divider with customizable direction and color.
+
+Props
+
+- direction: The direction of the divider ("l-to-r" when the upper component has positioning="left" and the second positioning="right; "r-to-l" when the upper component has positioning="right" and the second positioning="left").
+- color: Optional. The color key for the divider.
+-
+
+```jsx
+import {
+  AuraBeamVerticalDivider,
+  AuraBeamAnnotatorContainer,
+} from "aura-beam-annotator";
+
+<AuraBeamAnnotatorContainer>
+  <AuraBeamVerticalDivider direction="l-to-r" color="purple" />;
+</AuraBeamAnnotatorContainer>;
+```
+
+## Examples of use:
+
+<img alt="Tailwind CSS" src="https://raw.githubusercontent.com/goduu/aura-beam-annotator/HEAD/.github/ss_01.png" width="2067" style={{maxWidth: "100%"}}/>
+<img alt="Tailwind CSS" src="https://raw.githubusercontent.com/goduu/aura-beam-annotator/HEAD/.github/ss_02.png" width="2067" style={{maxWidth: "100%"}}/>
+<img alt="Tailwind CSS" src="https://raw.githubusercontent.com/goduu/aura-beam-annotator/HEAD/.github/ss_03.png" width="2067" style={{maxWidth: "100%"}}/>
+<img alt="Tailwind CSS" src="https://raw.githubusercontent.com/goduu/aura-beam-annotator/HEAD/.github/ss_04.png" width="2067" style={{maxWidth: "100%"}}/>
+
+## Customization
+
+The color props for these components are based on predefined color keys from Tailwind.
+
+## Contributing
+
+We welcome contributions to the AuraBeam Components library. Please read our contributing guidelines before submitting pull requests.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+```
+This file includes sections for installation instructions, descriptions of each component, their props, usage examples, customization tips, contributing guidelines, and licensing information. Adapt the content to fit the specifics of your package, such as the actual package name in the installation commands, the available props for each component, and any additional details you want to include about customization and contribution.
+
+```
+
+
+
+</div>
+
+
+<div className="grid">
+    <div className="flex gap-2">
+      <img src={Github} alt="Github logo" className="sb-explore-image"/>
+      Contribute to our project on GitHub
+
+    </div>
+      <a
+        href="https://github.com/Goduu/aura-beam-annotator"
+        target="_blank"
+        className="flex items-center gap-2"
+      >Star on GitHub<RightArrow /></a>
+   
+</div>
+
+

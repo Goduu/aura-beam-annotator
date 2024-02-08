@@ -1,6 +1,6 @@
 import React from 'react';
 import { bgColors, borderColors } from './colors';
-export const AuraBeamAnnotator = ({ title, color = "current", positioning, children }) => {
+export const AuraBeamAnnotator = ({ title, color = "white", positioning = "left", children }) => {
     const positionLeft = positioning === 'left';
     return (React.createElement("div", { className: `relative flex flex-col px-1 ${positionLeft ? 'items-start' : 'items-end'}` },
         React.createElement("div", { className: "relative flex items-center gap-2" },
