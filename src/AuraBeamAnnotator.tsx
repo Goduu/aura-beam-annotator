@@ -1,5 +1,7 @@
 import React, { FC, ReactNode } from 'react';
 import { ColorKeys, bgColors, borderColors } from './colors';
+import { PrimaryTitle } from './components/PrimaryTitle';
+import { SecondaryTitle } from './components/SecondaryTitle';
 
 export type AuraBeamAnnotatorProps = {
     title?: string | ReactNode;
@@ -18,21 +20,9 @@ export const AuraBeamAnnotator: FC<AuraBeamAnnotatorProps> = ({ title, type = "p
             <div className="relative flex items-center gap-2">
                 {/* circle */}
                 {primary ?
-                    <>
-                        <div className={`h-10 w-10 rounded-full ${bgColors[color]} absolute ${!positionLeft && "right-0"}`}></div>
-                        <h2 className={`text-4xl bold shadow-none ${positionLeft ? "ml-14" : "mr-14 "}`}>
-                            <span className={`z-10 absolute inset-y-0  border-r-8  ${borderColors[color]} ${positionLeft ? "left-0 ml-4" : "right-0 mr-4"}`}> </span>
-                            {title}
-                        </h2>
-                    </>
+                    <PrimaryTitle text={title} color={color} positionLeft={positionLeft} />
                     :
-                    <>
-                        <div className={`h-7 w-7 rounded-sm mx-1.5 ${bgColors[color]} absolute ${!positionLeft && "right-0"}`}></div>
-                        <h3 className={`text-xl bold shadow-none ${positionLeft ? "ml-14" : "mr-14 "}`}>
-                            <span className={`z-10 absolute inset-y-0  border-r-8  ${borderColors[color]} ${positionLeft ? "left-0 ml-4" : "right-0 mr-4"}`}> </span>
-                            {title}
-                        </h3>
-                    </>
+                    <SecondaryTitle text={title} color={color} positionLeft={positionLeft} />
                 }
             </div>
             {children ?
