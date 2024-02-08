@@ -37,3 +37,12 @@ export const AuraBeamAnnotatorLeft: Story = {
   },
 };
 
+export const AuraBeamAnnotatorSecondary: Story = {
+  args: {
+    type: "secondary",
+    children: "Ipsum lorem text here",
+    positioning: "left",
+    color: "teal",
+  },
+};
+

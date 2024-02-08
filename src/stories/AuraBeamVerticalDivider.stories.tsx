@@ -42,3 +42,17 @@ export const AuraBeamVerticalDividerRightToLeft: Story = {
     </AuraBeamAnnotatorContainer>
   ),
 };
+
+export const AuraBeamVerticalDividers: Story = {
+  args: {
+    direction: "r-to-l",
+    color: "teal",
+  },
+
+  render: (args) => (
+    <AuraBeamAnnotatorContainer >
+      <AuraBeamVerticalDivider {...args} />
+      <AuraBeamVerticalDivider {...args} direction='l-to-r' />
+    </AuraBeamAnnotatorContainer>
+  ),
+};

@@ -142,6 +142,21 @@ export const FullExample: Story = {
       </AuraBeamAnnotator>
       <AuraBeamVerticalDivider direction='l-to-r' color='teal' />
       <AuraBeamAnnotator title="Incididunt elit" color="teal" positioning="right">
+      </AuraBeamAnnotator>
+      <AuraBeamAnnotator type="secondary" title="Consecteutur Sed" color="teal" positioning="right">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </AuraBeamAnnotator>
+      <AuraBeamVerticalDivider direction='r-to-l' color='teal' />
+      <AuraBeamAnnotator title="Incididunt elit" color="teal" >
+        Excepteur sint occaecat cupidatat non proident,
+      </AuraBeamAnnotator>
+      <AuraBeamAnnotator type="secondary" title="Consecteutur Sed" color="teal" >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </AuraBeamAnnotator>
+      <AuraBeamAnnotator type="secondary" title="Consecteutur Sed" color="teal" >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </AuraBeamAnnotator>
+      <AuraBeamAnnotator type="secondary" title="Consecteutur Sed" color="teal" >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
       </AuraBeamAnnotator>
     </AuraBeamAnnotatorContainer>
