@@ -1,6 +1,6 @@
 {
   "name": "aura-beam-annotator",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "A React component to highlight and annotate text",
   "author": {
     "name": "Goduu"
