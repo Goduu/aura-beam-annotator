@@ -1,4 +1,4 @@
 export { AuraBeamAnnotator } from './AuraBeamAnnotator';
-export { AuraBeamAnnotatorContainer } from './AuraBeamAnnotatorContainer';
+export { AuraBeam as AuraBeamAnnotatorContainer } from './AuraBeam';
 export { AuraBeamVerticalDivider } from './AuraBeamVerticalDivider';
 //# sourceMappingURL=index.d.ts.map

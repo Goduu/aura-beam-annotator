@@ -2,7 +2,9 @@ import colors from "tailwindcss/colors";
 
 export type ColorKeys = keyof typeof colors;
 
-export const borderColors: Record<ColorKeys, string> = {
+export type Color = "slate" | "gray" | "zinc" | "neutral" | "stone" | "red" | "orange" | "amber" | "yellow" | "lime" | "green" | "emerald" | "teal" | "cyan" | "sky" | "blue" | "indigo" | "violet" | "purple" | "fuchsia" | "pink" | "rose" | "white" | "black" | "lightBlue" | "transparent" | "blueGray" | "warmGray" | "trueGray" | "coolGray" | "inherit" | "current"
+
+export const borderColors: Record<Color, string> = {
     "slate": "border-slate-500",
     "gray": "border-gray-500",
     "zinc": "border-zinc-500",
@@ -37,7 +39,7 @@ export const borderColors: Record<ColorKeys, string> = {
     "current": "border-current",
 }
 
-export const bgColors: Record<ColorKeys, string> = {
+export const bgColors: Record<Color, string> = {
     "slate": "bg-slate-500",
     "gray": "bg-gray-500",
     "zinc": "bg-zinc-500",

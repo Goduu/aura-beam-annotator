@@ -1,14 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { AuraBeamVerticalDivider } from '../AuraBeamVerticalDivider';
-import { AuraBeamAnnotatorContainer } from '../AuraBeamAnnotatorContainer';
+import { AuraBeam } from '../AuraBeam';
 import React from 'react';
 
 const meta = {
   title: 'AuraBeamVerticalDivider',
   component: AuraBeamVerticalDivider,
-  parameters: {
-    layout: 'centered',
-  },
   tags: ['autodocs'],
   argTypes: {
   },
@@ -24,9 +21,9 @@ export const AuraBeamVerticalDividerLeftToRight: Story = {
   },
 
   render: (args) => (
-    <AuraBeamAnnotatorContainer >
+    <AuraBeam >
       <AuraBeamVerticalDivider {...args} />
-    </AuraBeamAnnotatorContainer>
+    </AuraBeam>
   ),
 };
 
@@ -37,9 +34,9 @@ export const AuraBeamVerticalDividerRightToLeft: Story = {
   },
 
   render: (args) => (
-    <AuraBeamAnnotatorContainer >
+    <AuraBeam >
       <AuraBeamVerticalDivider {...args} />
-    </AuraBeamAnnotatorContainer>
+    </AuraBeam>
   ),
 };
 
@@ -50,9 +47,9 @@ export const AuraBeamVerticalDividers: Story = {
   },
 
   render: (args) => (
-    <AuraBeamAnnotatorContainer >
+    <AuraBeam >
       <AuraBeamVerticalDivider {...args} />
       <AuraBeamVerticalDivider {...args} direction='l-to-r' />
-    </AuraBeamAnnotatorContainer>
+    </AuraBeam>
   ),
 };

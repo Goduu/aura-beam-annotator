@@ -2,30 +2,31 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { AuraBeam } from '../AuraBeam';
 import React from 'react';
 import { AuraBeamAnnotator } from '../AuraBeamAnnotator';
+import { AuraBeamVerticalDivider } from '../AuraBeamVerticalDivider';
+import { AuraBeamTitle } from '../AuraBeamTitle';
 import { AuraBeamBody } from '../AuraBeamBody';
 
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-  title: 'AuraBeamAnnotator',
-  component: AuraBeamAnnotator,
+  title: 'AuraBeamBody',
+  component: AuraBeamBody,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
-} satisfies Meta<typeof AuraBeamAnnotator>;
+} satisfies Meta<typeof AuraBeamBody>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const AuraBeamAnnotatorRight: Story = {
+export const AuraBeamBodyRight: Story = {
   args: {
-    color: "teal",
-    positioning: "right",
+    children: null
   },
 
   render: (args) => (
     <AuraBeam >
-      <AuraBeamAnnotator {...args}>
+      <AuraBeamAnnotator color="teal" positioning="right">
         <AuraBeamBody>
           AuraBeamBody Right
         </AuraBeamBody>
@@ -34,7 +35,7 @@ export const AuraBeamAnnotatorRight: Story = {
   ),
 };
 
-export const AuraBeamAnnotatorLeft: Story = {
+export const AuraBeamBodyLeft: Story = {
   args: {
     children: null
   },

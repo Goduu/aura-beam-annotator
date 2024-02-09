@@ -1,44 +1,51 @@
-import React, { FC, ReactNode } from 'react';
-import { ColorKeys, bgColors, borderColors } from './colors';
-import { PrimaryTitle } from './components/PrimaryTitle';
-import { SecondaryTitle } from './components/SecondaryTitle';
+import React, { Attributes, Children, FC, ReactNode, cloneElement, isValidElement } from 'react';
+import { Color, ColorKeys, bgColors, borderColors } from './colors';
+import { Line } from './components/Line';
 
+/**
+ * Props for the AuraBeamAnnotator component.
+ */
 export type AuraBeamAnnotatorProps = {
-    title?: string | ReactNode;
-    type?: "primary" | "secondary";
+    /** The children of the component. */
     children?: ReactNode;
+    /**
+     * The positioning of the component.
+     * Can be either 'left' or 'right'.
+     */
     positioning?: 'left' | 'right';
-    color?: ColorKeys;
+    /**
+     * The color of the component. 
+     * Can be any Tailwind base color name.
+     */
+    color?: Color;
 };
 
-export const AuraBeamAnnotator: FC<AuraBeamAnnotatorProps> = ({ title, type = "primary", color = "white", positioning = "left", children }) => {
-    const positionLeft = positioning === 'left'
-    const primary = type === "primary";
+
+/**
+
+AuraBeamAnnotator component.
+The Annotator defines the positioning and color of its children components.
+@component
+@param {Object} props - The component props.
+@param {ReactNode} props.children - The children nodes.
+@param {string} props.positioning - The positioning of the component ('left' or 'right').
+@param {Color} props.color - The color of the component.
+@returns {JSX.Element} The rendered AuraBeamAnnotator component. 
+*/
+export const AuraBeamAnnotator: FC<AuraBeamAnnotatorProps> = ({ color = "white", positioning = "left", children }) => {
+    const right = positioning === 'right'
 
     return (
-        <div className={`relative flex flex-col px-1 ${positionLeft ? 'items-start' : 'items-end'}`}>
-            <div className="relative flex items-center gap-2">
-                {/* circle */}
-                {primary ?
-                    <PrimaryTitle text={title} color={color} positionLeft={positionLeft} />
-                    :
-                    <SecondaryTitle text={title} color={color} positionLeft={positionLeft} />
-                }
-            </div>
-            {children ?
-                <div className="mt-[-0.5px] pb-16 mb-[-0.5px] relative">
-                    {/* line */}
-                    <div className={`z-10 absolute inset-y-0  border-r-8 ${borderColors[color]} ${positionLeft ? "left-0 ml-4" : "right-0 mr-4"}`}> </div>
-                    <div className={`mt-4 drop-shadow-none ${positionLeft ? "ml-14" : "mr-14 text-right"}`}>
-                        {children}
-                    </div>
-                </div>
-                :
-                <div className='pb-6'>
-                    <div className={`z-10 absolute inset-y-0  border-r-8 ${borderColors[color]} ${positionLeft ? "left-0 ml-5" : "right-0 mr-5"}`}> </div>
-                </div>
+        <div className={`relative flex flex-col ${right ? 'items-end' : 'items-start'}`}>
+            <Line color={color} right={right} />
+            {children &&
+                Children.map(children, child => {
+                    if (isValidElement(child)) {
+                        return cloneElement(child, { color: color, positioning: positioning } as Attributes);
+                    }
+                    return null;
+                })
             }
-
         </div>
     );
 };
