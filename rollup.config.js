@@ -31,8 +31,8 @@ export default {
     }),
     postcss({
       plugins: [require("tailwindcss"), require("autoprefixer")],
-      inject: true, // Inject styles directly into the head
-      extract: false, // Extract to a separate file (set to true if you prefer)
+      inject: false, // Inject styles directly into the head
+      extract: true, // Extract styles to a file
     }),
     babel({
       exclude: "node_modules/**",

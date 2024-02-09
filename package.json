@@ -1,6 +1,6 @@
 {
   "name": "aura-beam-annotator",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "A React component to highlight and annotate text",
   "author": {
     "name": "Goduu"
@@ -22,7 +22,8 @@
   ],
   "scripts": {
     "start": "cd examples && npm start",
-    "build": "rollup -c",
+    "build": "npm run build:css && rollup -c",
+    "build:css": "postcss styles/tailwind.css -o dist/tailwind.css",
     "publish": "npm run build && npm publish --access public",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build -o .storybook-static",
@@ -59,6 +60,7 @@
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.18",
     "autoprefixer": "^10.4.17",
+    "postcss-cli": "^11.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup": "^2.79.1",
