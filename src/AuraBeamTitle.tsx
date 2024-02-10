@@ -1,7 +1,8 @@
-import React, { FC, ReactNode } from 'react';
-import { Color, ColorKeys, bgColors, borderColors } from './colors';
+import React, { FC, ReactNode, useContext } from 'react';
+import { Color } from './colors';
 import { PrimaryTitle } from './components/PrimaryTitle';
 import { SecondaryTitle } from './components/SecondaryTitle';
+import { SharedPropContext } from './components/Context';
 
 /**
  * Props for the AuraBeamTitle component.
@@ -41,16 +42,17 @@ export type AuraBeamTitleProps = {
  * @param {string} [props.positioning="left"] - The positioning of the title (left or right).
  * @returns {JSX.Element} The rendered AuraBeamTitle component.
  */
-export const AuraBeamTitle: FC<AuraBeamTitleProps> = ({ title, type = "primary", color = "white", positioning = "left" }) => {
-    const right = positioning === 'right'
+export const AuraBeamTitle: FC<AuraBeamTitleProps> = ({ title, type = "primary", ...props }) => {
+    const sharedProps = useContext(SharedPropContext);
+    const right = props.positioning ? props.positioning === "right" : sharedProps.positioning === 'right';
     const primary = type === "primary";
 
     return (
         <div className="relative flex items-center gap-2">
             {primary ?
-                <PrimaryTitle text={title} color={color} right={right} />
+                <PrimaryTitle text={title} right={right} color={props.color || sharedProps.color} />
                 :
-                <SecondaryTitle text={title} color={color} right={right} />
+                <SecondaryTitle text={title} right={right} color={props.color || sharedProps.color} />
             }
         </div>
     );

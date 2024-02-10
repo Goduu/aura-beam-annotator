@@ -1,6 +1,7 @@
-import React, { Attributes, Children, FC, ReactNode, cloneElement, isValidElement } from 'react';
-import { Color, ColorKeys, bgColors, borderColors } from './colors';
+import React, { FC, ReactNode } from 'react';
+import { Color } from './colors';
 import { Line } from './components/Line';
+import { SharedPropContext } from './components/Context';
 
 /**
  * Props for the AuraBeamAnnotator component.
@@ -38,14 +39,9 @@ export const AuraBeamAnnotator: FC<AuraBeamAnnotatorProps> = ({ color = "white",
     return (
         <div className={`relative flex flex-col ${right ? 'items-end' : 'items-start'}`}>
             <Line color={color} right={right} />
-            {children &&
-                Children.map(children, child => {
-                    if (isValidElement(child)) {
-                        return cloneElement(child, { color: color, positioning: positioning } as Attributes);
-                    }
-                    return null;
-                })
-            }
+            <SharedPropContext.Provider value={{ color, positioning }}>
+                {children}
+            </SharedPropContext.Provider>
         </div>
     );
 };

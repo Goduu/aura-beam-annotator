@@ -1,8 +1,8 @@
 import { FC, ReactNode } from 'react';
-import { ColorKeys } from '../colors';
+import { Color } from '../colors';
 export type SecondaryTitleProps = {
     text: string | ReactNode;
-    color: ColorKeys;
+    color: Color;
     right: boolean;
 };
 export declare const SecondaryTitle: FC<SecondaryTitleProps>;

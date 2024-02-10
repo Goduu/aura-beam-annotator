@@ -1,10 +1,10 @@
 import React, { FC, ReactNode } from 'react'
-import { ColorKeys, bgColors, borderColors } from '../colors';
+import { Color, bgColors } from '../colors';
 import { Line } from './Line';
 
 export type PrimaryTitleProps = {
     text: string | ReactNode;
-    color: ColorKeys
+    color: Color
     right: boolean;
 }
 

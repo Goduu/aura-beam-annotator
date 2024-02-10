@@ -11,7 +11,6 @@ export type AuraBeamBodyProps = {
     /**
      * The positioning of the AuraBeamBody.
      * Prop automatically set by the AuraBeamAnnotator component.
-     * @default 'left'
      */
     positioning?: 'left' | 'right';
     /**

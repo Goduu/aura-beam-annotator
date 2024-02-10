@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { Color, ColorKeys, borderColors } from './colors';
+import { Color, borderColors } from './colors';
 
 /**
  * Props for the AuraBeamVerticalDivider component.

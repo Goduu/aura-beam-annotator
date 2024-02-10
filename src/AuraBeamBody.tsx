@@ -1,6 +1,7 @@
-import React, { FC, ReactNode } from 'react'
-import { Color, ColorKeys, borderColors } from './colors';
+import React, { FC, ReactNode, useContext } from 'react'
+import { Color } from './colors';
 import { Line } from './components/Line';
+import { SharedPropContext } from './components/Context';
 
 /**
  * Props for the AuraBeamBody component.
@@ -13,7 +14,6 @@ export type AuraBeamBodyProps = {
     /**
      * The positioning of the AuraBeamBody.
      * Prop automatically set by the AuraBeamAnnotator component.
-     * @default 'left'
      */
     positioning?: 'left' | 'right';
     /**
@@ -35,12 +35,13 @@ export type AuraBeamBodyProps = {
  * @param {Color} [props.color="white"] - The color of the AuraBeamBody component.
  * @returns {JSX.Element} The rendered AuraBeamBody component.
  */
-export const AuraBeamBody: FC<AuraBeamBodyProps> = ({ children, positioning = "left", color = "white" }) => {
-    const right = positioning === 'right'
+export const AuraBeamBody: FC<AuraBeamBodyProps> = ({ children, ...props }) => {
+    const sharedProp = useContext(SharedPropContext);
+    const right = props.positioning ? props.positioning === "right" : sharedProp.positioning === 'right';
 
     return (
         <div className="mt-[-0.5px] pb-16 mb-[-0.5px] relative">
-            <Line color={color} right={right} />
+            <Line {...sharedProp} {...props} right={right} />
             <div className={`mt-4 drop-shadow-none ${!right ? "ml-14" : "mr-14 text-right"}`}>
                 {children}
             </div>

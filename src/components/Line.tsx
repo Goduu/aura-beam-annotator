@@ -1,9 +1,9 @@
 import React, { FC } from 'react'
-import { ColorKeys, borderColors } from '../colors';
+import { Color, borderColors } from '../colors';
 
 export type LineProps = {
-    right?: boolean;
-    color?: ColorKeys;
+    right: boolean;
+    color?: Color;
 };
 
 export const Line: FC<LineProps> = ({ right, color = "white" }) => {
