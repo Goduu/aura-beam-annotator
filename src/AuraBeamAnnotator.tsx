@@ -1,7 +1,7 @@
-import React, { FC, ReactNode } from 'react';
+import React, { Attributes, Children, FC, ReactNode, cloneElement, isValidElement } from 'react';
 import { Color } from './colors';
 import { Line } from './components/Line';
-import { SharedPropContext } from './components/Context';
+import { isValidAuraBeamElement } from './components/isValidAuraBeamElement';
 
 /**
  * Props for the AuraBeamAnnotator component.
@@ -39,9 +39,26 @@ export const AuraBeamAnnotator: FC<AuraBeamAnnotatorProps> = ({ color = "white",
     return (
         <div className={`relative flex flex-col ${right ? 'items-end' : 'items-start'}`}>
             <Line color={color} right={right} />
-            <SharedPropContext.Provider value={{ color, positioning }}>
-                {children}
-            </SharedPropContext.Provider>
+            {children &&
+                Children.map(children, child => {
+                    if (isValidElement(child)) {
+                        // apply the parent properties up to one level nested children
+                        const childArray = React.Children.toArray(child.props.children);
+                        const childrenClone = Children.map(childArray, child => {
+                            if (isValidAuraBeamElement(child)) {
+                                return cloneElement(child, { color, positioning } as Attributes);
+                            }
+                            return child
+                        })
+
+                        if (isValidAuraBeamElement(child)) {
+                            return cloneElement(child, { color, positioning, children: childrenClone } as Attributes);
+                        }
+
+                        return cloneElement(child, { children: childrenClone } as Attributes);
+                    }
+                })
+            }
         </div>
     );
 };
