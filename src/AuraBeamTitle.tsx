@@ -1,5 +1,5 @@
 import React, { FC, ReactNode, useContext } from 'react';
-import { Color } from './colors';
+import { AuraBeamColor } from './colors';
 import { PrimaryTitle } from './components/PrimaryTitle';
 import { SecondaryTitle } from './components/SecondaryTitle';
 
@@ -26,7 +26,7 @@ export type AuraBeamTitleProps = {
      * Should be one of the predefined color keys.
      * Prop automatically set by the AuraBeamAnnotator component.
      */
-    color?: Color;
+    color?: AuraBeamColor;
 };
 
 /**
@@ -37,7 +37,7 @@ export type AuraBeamTitleProps = {
  * @param {AuraBeamTitleProps} props - The props for the AuraBeamTitle component.
  * @param {string} props.title - The title text.
  * @param {string} [props.type="primary"] - The type of the title (primary or secondary).
- * @param {Color} [props.color="white"] - The color of the title.
+ * @param {AuraBeamColor} [props.color="white"] - The color of the title.
  * @param {string} [props.positioning="left"] - The positioning of the title (left or right).
  * @returns {JSX.Element} The rendered AuraBeamTitle component.
  */

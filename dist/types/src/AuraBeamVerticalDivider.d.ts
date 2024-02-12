@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Color } from './colors';
+import { AuraBeamColor } from './colors';
 /**
  * Props for the AuraBeamVerticalDivider component.
  */
@@ -14,7 +14,7 @@ export type AuraBeamVerticalDividerProps = {
      * The color of the vertical divider.
      * Can be any Tailwind base color name.
      */
-    color?: Color;
+    color?: AuraBeamColor;
 };
 /**
  * AuraBeamVerticalDivider component represents a vertical divider used in the AuraBeam application.
@@ -22,7 +22,7 @@ export type AuraBeamVerticalDividerProps = {
  * @component
  * @param {object} props - The component props.
  * @param {string} props.direction - The direction of the divider. Default is "l-to-r".
- * @param {Color} props.color - The color of the divider. Default is "white".
+ * @param {AuraBeamColor} props.color - The color of the divider. Default is "white".
  * @returns {JSX.Element} The rendered AuraBeamVerticalDivider component.
  */
 export declare const AuraBeamVerticalDivider: FC<AuraBeamVerticalDividerProps>;

@@ -1,9 +1,9 @@
 import React, { FC } from 'react'
-import { Color, borderColors } from '../colors';
+import { AuraBeamColor, borderColors } from '../colors';
 
 export type LineProps = {
     right: boolean;
-    color?: Color;
+    color?: AuraBeamColor;
 };
 
 export const Line: FC<LineProps> = ({ right, color = "white" }) => {

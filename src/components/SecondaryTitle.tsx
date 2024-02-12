@@ -1,10 +1,10 @@
 import React, { FC, ReactNode } from 'react'
-import { Color, bgColors } from '../colors';
+import { AuraBeamColor, bgColors } from '../colors';
 import { Line } from './Line';
 
 export type SecondaryTitleProps = {
     text: string | ReactNode;
-    color: Color
+    color: AuraBeamColor
     right: boolean;
 }
 

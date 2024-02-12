@@ -1,8 +1,8 @@
 import { FC, ReactNode } from 'react';
-import { Color } from '../colors';
+import { AuraBeamColor } from '../colors';
 export type SecondaryTitleProps = {
     text: string | ReactNode;
-    color: Color;
+    color: AuraBeamColor;
     right: boolean;
 };
 export declare const SecondaryTitle: FC<SecondaryTitleProps>;

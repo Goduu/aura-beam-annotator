@@ -1,6 +1,6 @@
-export type Color = "slate" | "gray" | "zinc" | "neutral" | "stone" | "red" | "orange" | "amber" | "yellow" | "lime" | "green" | "emerald" | "teal" | "cyan" | "sky" | "blue" | "indigo" | "violet" | "purple" | "fuchsia" | "pink" | "rose" | "white" | "black" | "lightBlue" | "transparent" | "blueGray" | "warmGray" | "trueGray" | "coolGray" | "inherit" | "current"
+export type AuraBeamColor = "slate" | "gray" | "zinc" | "neutral" | "stone" | "red" | "orange" | "amber" | "yellow" | "lime" | "green" | "emerald" | "teal" | "cyan" | "sky" | "blue" | "indigo" | "violet" | "purple" | "fuchsia" | "pink" | "rose" | "white" | "black" | "lightBlue" | "transparent" | "blueGray" | "warmGray" | "trueGray" | "coolGray" | "inherit" | "current"
 
-export const borderColors: Record<Color, string> = {
+export const borderColors: Record<AuraBeamColor, string> = {
     "slate": "border-slate-500",
     "gray": "border-gray-500",
     "zinc": "border-zinc-500",
@@ -35,7 +35,7 @@ export const borderColors: Record<Color, string> = {
     "current": "border-current",
 }
 
-export const bgColors: Record<Color, string> = {
+export const bgColors: Record<AuraBeamColor, string> = {
     "slate": "bg-slate-500",
     "gray": "bg-gray-500",
     "zinc": "bg-zinc-500",

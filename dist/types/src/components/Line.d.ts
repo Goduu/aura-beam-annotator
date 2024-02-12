@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import { Color } from '../colors';
+import { AuraBeamColor } from '../colors';
 export type LineProps = {
     right: boolean;
-    color?: Color;
+    color?: AuraBeamColor;
 };
 export declare const Line: FC<LineProps>;
 //# sourceMappingURL=Line.d.ts.map

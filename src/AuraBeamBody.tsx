@@ -1,5 +1,5 @@
 import React, { FC, ReactNode, useContext } from 'react'
-import { Color } from './colors';
+import { AuraBeamColor } from './colors';
 import { Line } from './components/Line';
 
 /**
@@ -19,7 +19,7 @@ export type AuraBeamBodyProps = {
      * The color of the AuraBeamBody.
      * Prop automatically set by the AuraBeamAnnotator component.
      */
-    color?: Color;
+    color?: AuraBeamColor;
 };
 
 
@@ -31,7 +31,7 @@ export type AuraBeamBodyProps = {
  * @param {AuraBeamBodyProps} props - The props for the AuraBeamBody component.
  * @param {ReactNode} props.children - The content to be rendered inside the AuraBeamBody component.
  * @param {string} [props.positioning="left"] - The positioning of the AuraBeamBody component. Can be "left" or "right".
- * @param {Color} [props.color="white"] - The color of the AuraBeamBody component.
+ * @param {AuraBeamColor} [props.color="white"] - The color of the AuraBeamBody component.
  * @returns {JSX.Element} The rendered AuraBeamBody component.
  */
 export const AuraBeamBody: FC<AuraBeamBodyProps> = ({ children, color, positioning }) => {

@@ -1,5 +1,5 @@
 import { FC, ReactNode } from 'react';
-import { Color } from './colors';
+import { AuraBeamColor } from './colors';
 /**
  * Props for the AuraBeamAnnotator component.
  */
@@ -15,7 +15,7 @@ export type AuraBeamAnnotatorProps = {
      * The color of the component.
      * Can be any Tailwind base color name.
      */
-    color?: Color;
+    color?: AuraBeamColor;
 };
 /**
 
@@ -25,7 +25,7 @@ The Annotator defines the positioning and color of its children components.
 @param {Object} props - The component props.
 @param {ReactNode} props.children - The children nodes.
 @param {string} props.positioning - The positioning of the component ('left' or 'right').
-@param {Color} props.color - The color of the component.
+@param {AuraBeamColor} props.color - The color of the component.
 @returns {JSX.Element} The rendered AuraBeamAnnotator component.
 */
 export declare const AuraBeamAnnotator: FC<AuraBeamAnnotatorProps>;
