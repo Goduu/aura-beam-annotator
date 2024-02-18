@@ -24,6 +24,12 @@ Or if you prefer using yarn:
 yarn add aura-beam-annotator
 ```
 
+Import the css to your main component:
+
+```ts
+import "aura-beam-annotator/dist/tailwind.css";
+```
+
 ## Components
 
 ### AuraBeamAnnotator
