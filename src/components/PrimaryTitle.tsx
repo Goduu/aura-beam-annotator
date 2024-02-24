@@ -17,7 +17,7 @@ export const PrimaryTitle: FC<PrimaryTitleProps> = ({ text, color, right }) => {
                 <Line color={color} right={right} />
                 <div className='w-full relative'>
                     <div className={`border-b-8 h-full mt-[0.245px] w-6 ${borderColors[color]} absolute ${right ? "right-[-20px] border-r-8 rounded-br-full" : "left-[-20px] border-l-8 rounded-bl-full"}`} />
-                    <div className={`w-full border-b-8 ${borderColors[color]} ${right ? "pl-4 text-right" : "pr-4"}`} >
+                    <div className={`w-full border-b-8 p-2 ${borderColors[color]} ${right ? "pl-4 text-right" : "pr-4"}`} >
                         {text}
                     </div>
                 </div>
